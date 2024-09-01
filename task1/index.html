@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="gallery">
+        <a href="#">
+            <img src="https://source.unsplash.com/random/300x300?sig=1" alt="Image 1">
+        </a>
+        <a href="#">
+            <img src="https://source.unsplash.com/random/300x300?sig=2" alt="Image 2">
+        </a>
+        <a href="#">
+            <img src="https://source.unsplash.com/random/300x300?sig=3" alt="Image 3">
+        </a>
+        <a href="#">
+            <img src="https://source.unsplash.com/random/300x300?sig=4" alt="Image 4">
+        </a>
+        <!-- Add more images as needed -->
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
