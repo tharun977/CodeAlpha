@@ -1,50 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Image Gallery</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">MyGallery</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="header">
-        <h1>Beautiful Image Gallery</h1>
-        <p>Explore stunning images from around the world</p>
-    </header>
-
-    <!-- Loading Spinner -->
-    <div id="loader" class="loader"></div>
-
-    <!-- Image Gallery -->
-    <section id="gallery" class="gallery-section">
-        <div class="gallery">
-            <!-- Images will be loaded here dynamically -->
-        </div>
-    </section>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top">&#8679;</button>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 MyGallery. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="thumbs">
+    <a href="#target1"><img src='https://images.unsplash.com/photo-1679581858563-3c808d23f0fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTMyMjM&ixlib=rb-4.0.3&q=80&w=400' alt=''></a>
+    <a href="#target2"><img src='https://images.unsplash.com/photo-1680925723180-ff3cb559c9b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTMyMjM&ixlib=rb-4.0.3&q=80&w=400' alt=''></a>
+    <a href="#target3"><img src='https://images.unsplash.com/photo-1508849789987-4e5333c12b78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTQ0MDQ&ixlib=rb-4.0.3&q=80&w=400' alt=''></a>
+  </div>
+  
+  <div class="lightbox">
+    <div class="target" id="target1">
+      <span>
+        <!-- spacer to keep content centered in the flex container -->
+      </span>
+      <div class="content">
+        <img src='https://images.unsplash.com/photo-1679581858563-3c808d23f0fc?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTMyMjM&ixlib=rb-4.0.3&q=85' alt=''>
+      </div>
+      <a href="#target2" class="fas fa-chevron-right nav" title="next"></a>
+    </div>
+    <div class="target" id="target2">
+      <a href="#target1" class="fas fa-chevron-left nav" title="previous"></a>
+      <div class="content"><img src='https://images.unsplash.com/photo-1680925723180-ff3cb559c9b4?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTMyMjM&ixlib=rb-4.0.3&q=85' alt=''></div>
+      <a href="#target3" class="fas fa-chevron-right nav" title="next"></a>
+    </div>
+    <div class="target" id="target3">
+      <a href="#target2" class="fas fa-chevron-left nav" title="previous"></a>
+      <div class="content"><img src='https://images.unsplash.com/photo-1508849789987-4e5333c12b78?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTQ0MDQ&ixlib=rb-4.0.3&q=85' alt=''></div>
+      <span>
+        <!-- spacer to keep content centered in the flex container -->
+      </span>
+    </div>
+    <a href="#!" class="fas fa-times close nav"></a>
+  </div>
