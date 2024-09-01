@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://images.pexels.com/photos/712618/pexels-photo-712618.jpeg',
         'https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg',
         'https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg',
-        'https://images.pexels.com/photos/462353/pexels-photo-462353.jpeg'
+        'https://images.pexels.com/photos/462353/pexels-photo-462353.jpeg',
+        'https://images.pexels.com/photos/158607/pexels-photo-158607.jpeg', // New
+        'https://images.pexels.com/photos/3171188/pexels-photo-3171188.jpeg', // New
+        'https://images.pexels.com/photos/1004112/pexels-photo-1004112.jpeg', // New
+        'https://images.pexels.com/photos/193048/pexels-photo-193048.jpeg', // New
+        'https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg'  // New
     ];
 
     // Show loader
