@@ -1,61 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>CALCULATOR</title>
-  <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    /><link rel="stylesheet" href="./style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<main class="main">
-      <div class="calculator">
-        <div class="screen">
-          <div class="screen-last" id="lastOperationScreen"></div>
-          <div class="screen-current" id="currentOperationScreen">0</div>
-        </div>
-        <div class="buttons-grid">
-          <button
-            class="btn btn-red span-2"
-            id="clearBtn"
-            onclick="this.blur();"
-          >
-            CLEAR
-          </button>
-          <button
-            class="btn btn-blue span-2"
-            id="deleteBtn"
-            onclick="this.blur();"
-          >
-            DELETE
-          </button>
-          <button class="btn" onclick="this.blur();" data-number>7</button>
-          <button class="btn" onclick="this.blur();" data-number>8</button>
-          <button class="btn" onclick="this.blur();" data-number>9</button>
-          <button class="btn" onclick="this.blur();" data-operator>÷</button>
-
-          <button class="btn" onclick="this.blur();" data-number>4</button>
-          <button class="btn" onclick="this.blur();" data-number>5</button>
-          <button class="btn" onclick="this.blur();" data-number>6</button>
-          <button class="btn" onclick="this.blur();" data-operator>×</button>
-
-          <button class="btn" onclick="this.blur();" data-number>1</button>
-          <button class="btn" onclick="this.blur();" data-number>2</button>
-          <button class="btn" onclick="this.blur();" data-number>3</button>
-          <button class="btn" onclick="this.blur();" data-operator>−</button>
-
-          <button class="btn" onclick="this.blur();" id="pointBtn">.</button>
-          <button class="btn" onclick="this.blur();" data-number>0</button>
-          <button class="btn" onclick="this.blur();" id="equalsBtn">=</button>
-          <button class="btn" onclick="this.blur();" data-operator>+</button>
-        </div>
+<body class="light-mode">
+  <button id="modeToggle" title="Toggle Dark/Light Mode">
+    <i class="fas fa-sun" id="sunIcon"></i>
+    <i class="fas fa-moon" id="moonIcon"></i>
+  </button>
+  <div class="main">
+    <div class="calculator">
+      <div class="screen">
+        <div class="screen-last" id="lastOperationScreen"></div>
+        <div class="screen-current" id="currentOperationScreen">0</div>
       </div>
-    </main>
-<!-- partial -->
-  <script  src="./script.js"></script>
+      <div class="buttons-grid">
+        <button class="btn btn-red span-2" id="clearBtn" onclick="this.blur();">CLEAR</button>
+        <button class="btn btn-blue span-2" id="deleteBtn" onclick="this.blur();">DELETE</button>
+        <button class="btn" onclick="this.blur();" data-number>7</button>
+        <button class="btn" onclick="this.blur();" data-number>8</button>
+        <button class="btn" onclick="this.blur();" data-number>9</button>
+        <button class="btn" onclick="this.blur();" data-operator>÷</button>
+        <button class="btn" onclick="this.blur();" data-number>4</button>
+        <button class="btn" onclick="this.blur();" data-number>5</button>
+        <button class="btn" onclick="this.blur();" data-number>6</button>
+        <button class="btn" onclick="this.blur();" data-operator>×</button>
+        <button class="btn" onclick="this.blur();" data-number>1</button>
+        <button class="btn" onclick="this.blur();" data-number>2</button>
+        <button class="btn" onclick="this.blur();" data-number>3</button>
+        <button class="btn" onclick="this.blur();" data-operator>−</button>
+        <button class="btn" onclick="this.blur();" id="pointBtn">.</button>
+        <button class="btn" onclick="this.blur();" data-number>0</button>
+        <button class="btn" onclick="this.blur();" id="equalsBtn">=</button>
+        <button class="btn" onclick="this.blur();" data-operator>+</button>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+  <script>
+    const modeToggle = document.getElementById('modeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    let isDarkMode = false;
 
+    modeToggle.addEventListener('click', () => {
+      isDarkMode = !isDarkMode;
+      document.body.classList.toggle('dark-mode', isDarkMode);
+      document.body.classList.toggle('light-mode', !isDarkMode);
+      sunIcon.style.display = isDarkMode ? 'none' : 'block';
+      moonIcon.style.display = isDarkMode ? 'block' : 'none';
+    });
+  </script>
 </body>
 </html>

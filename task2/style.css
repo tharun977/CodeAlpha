@@ -1,20 +1,138 @@
-:root {
-    --background: #f6f6f6;
-    --font: #222;
-    --border: #333;
-    --screen: #eee;
-    --calculator: #aaa;
-    --btn: #eee;
-    --btn-hover: #ddd;
-    --btn-active: #ccc;
-    --btn-red: #faa;
-    --btn-red-hover: #e99;
-    --btn-red-active: #d88;
-    --btn-blue: #aaf;
-    --btn-blue-hover: #99e;
-    --btn-blue-active: #88d;
+/* Light Mode */
+body.light-mode {
+    background: #e0f7fa;
+    color: #000;
   }
   
+  body.light-mode .calculator {
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  body.light-mode .btn {
+    background-color: #e0f7fa;
+  }
+  
+  body.light-mode .btn:hover {
+    background-color: #b2ebf2;
+  }
+  
+  body.light-mode .btn:active {
+    background-color: #80deea;
+  }
+  
+  body.light-mode .btn-red {
+    background-color: #ffab91;
+  }
+  
+  body.light-mode .btn-red:hover {
+    background-color: #ff8a65;
+  }
+  
+  body.light-mode .btn-red:active {
+    background-color: #ff7043;
+  }
+  
+  body.light-mode .btn-blue {
+    background-color: #81d4fa;
+  }
+  
+  body.light-mode .btn-blue:hover {
+    background-color: #4fc3f7;
+  }
+  
+  body.light-mode .btn-blue:active {
+    background-color: #29b6f6;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background: #121212;
+    color: #fff;
+  }
+  
+  body.dark-mode .calculator {
+    background: #1e1e1e;
+    border: 1px solid #333;
+  }
+  
+  body.dark-mode .btn {
+    background-color: #333;
+  }
+  
+  body.dark-mode .btn:hover {
+    background-color: #555;
+  }
+  
+  body.dark-mode .btn:active {
+    background-color: #777;
+  }
+  
+  body.dark-mode .btn-red {
+    background-color: #d32f2f;
+  }
+  
+  body.dark-mode .btn-red:hover {
+    background-color: #b71c1c;
+  }
+  
+  body.dark-mode .btn-red:active {
+    background-color: #c62828;
+  }
+  
+  body.dark-mode .btn-blue {
+    background-color: #1976d2;
+  }
+  
+  body.dark-mode .btn-blue:hover {
+    background-color: #1565c0;
+  }
+  
+  body.dark-mode .btn-blue:active {
+    background-color: #0d47a1;
+  }
+  
+  /* Button Styles */
+  #modeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+  }
+  
+  body.dark-mode #modeToggle {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-mode #modeToggle:hover {
+    background-color: #444;
+  }
+  
+  #sunIcon, #moonIcon {
+    display: none;
+    color: inherit;
+  }
+  
+  body.light-mode #sunIcon {
+    display: block;
+  }
+  
+  body.dark-mode #moonIcon {
+    display: block;
+  }
+  
+  /* COMMON */
   *,
   *::before,
   *::after {
@@ -144,3 +262,4 @@
     -webkit-appearance: none;
     margin: 0;
   }
+  
