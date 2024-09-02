@@ -6,7 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(45deg, #283c86, #45a247); /* New background gradient */
     font-family: Arial, sans-serif;
 }
 
@@ -15,23 +15,28 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 300px;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .display {
     background-color: #444;
     color: white;
     font-size: 2em;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
-    margin-bottom: 10px;
     text-align: right;
+    flex-grow: 1;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-top: 10px;
 }
 
 .btn {
@@ -43,6 +48,10 @@ body {
     color: white;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
 
 .btn:hover {
@@ -57,4 +66,22 @@ body {
     grid-column: span 4;
     background-color: #2a9d8f;
     color: white;
+    height: 60px;
+}
+
+/* Responsiveness */
+@media (max-width: 360px) {
+    .calculator {
+        width: 90%;
+        height: auto;
+    }
+
+    .btn {
+        font-size: 1.2em;
+        height: 50px;
+    }
+
+    .equal {
+        height: 50px;
+    }
 }
