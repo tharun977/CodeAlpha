@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000; /* Solid background color */
+    overflow: hidden; /* Hide overflow to ensure smooth animations */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .music-container {
+    background: rgba(0, 0, 0, 0.85); /* Slightly transparent dark background */
+    padding: 30px;
+    border-radius: 20px; /* Rounded corners for a modern look */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Deep shadow for floating effect */
+    color: #fff;
+    text-align: center;
+    width: 350px;
+    position: relative; /* Ensure that the background effects are positioned relative to this container */
+    z-index: 2; /* Ensure it's above the animated background */
+  }
+  
+  .music-info {
+    margin-bottom: 20px;
+  }
+  
+  .progress-container {
+    background: rgba(255, 255, 255, 0.2); /* Light progress bar background */
+    border-radius: 10px;
+    cursor: pointer;
+    height: 8px;
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .progress {
+    background: #1db954; /* Spotify green color */
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+  }
+  
+  .img-container {
+    margin-bottom: 20px;
+  }
+  
+  .img-container img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* More pronounced shadow for cover image */
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .action-btn {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent buttons */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem; /* Consistent button size */
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 50px; /* Set width for uniform button size */
+    height: 50px; /* Set height for uniform button size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .action-btn:hover {
+    background: rgba(255, 255, 255, 0.4); /* Light up on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .action-btn-big {
+    font-size: 1.8rem; /* Slightly larger for play button */
+    width: 60px; /* Larger width for play button */
+    height: 60px; /* Larger height for play button */
+  }
+  
+  .time-container {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Animated Background */
+  @keyframes animateBackground {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.4), rgba(0, 204, 255, 0.4)); /* Gradient background with interactive colors */
+    animation: animateBackground 15s linear infinite; /* Smooth animation for the background */
+    z-index: 1; /* Ensure it's behind the content */
+  }
+  
